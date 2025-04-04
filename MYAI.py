@@ -1,4 +1,4 @@
-import os
+ import os
 from click import command
 import pyttsx3
 import speech_recognition as sr
@@ -70,14 +70,14 @@ if __name__ == "__main__":
                          strTime = datetime.datetime.now().strftime("%H:%M:%S")
                          speak("Sir, Now The Time Is: " + strTime)
                          print(strTime)
-                    elif'mute'in query:
+                    if'mute'in query:
                          speak("I'm Muting Sir!....")
                          break
-                    elif'exit program'in query:
+                    if'exit program'in query:
                          print("I'm Leaving Sir,Byeee!.....Don,t Forgot To Take Your Meal Sir!...")
                          speak("I'm Leaving Sir,Byeee!.....Don,t Forgot To Take Your Meal Sir!...")
                          quit()
-                    elif 'open chrome'in query:
+                    if 'open chrome'in query:
                          speak("Opening Chrome Sir ")
                          os.startfile("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe")
                          while True:
@@ -92,18 +92,18 @@ if __name__ == "__main__":
                                    pyautogui.hotkey('ctrl','w')
                                    speak("closing the chrome sir!...")
                                    break
-                    elif 'lets begin the work'in query or 'open ardunio' in query:
+                    if 'lets begin the work'in query or 'open ardunio' in query:
                          speak("Optimising Sir!...")
                          speak("please wait!...")
                          speak("opening Arduino Sir!...")
                          os.startfile("C:Users\\karthikeyen\\AppData\\Local\\Programs\\Arduino IDE\\Arduino IDE.exe")
-                    elif 'open media player' in query:
+                    if 'open media player' in query:
                          speak("Opening vlc media player Sir ")
                          os.startfile("C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe")
-                    elif 'open file manager' in query:
+                    if 'open file manager' in query:
                          speak("Opening file manager Sir ")
                          os.startfile("C:\\Users\\karthikeyen\\OneDrive\\Desktop\\This PC - Shortcut.lnk")
-                    elif'play music' in query or 'play song' in query or 'play a song' in query:
+                    if'play music' in query or 'play song' in query or 'play a song' in query:
                          speak("playing song sir")
                          os.startfile("C:\\Users\\karthikeyen\\OneDrive\\Music\\Playlists\\new.wpl")
                     if 'next song' in query:
@@ -122,7 +122,7 @@ if __name__ == "__main__":
                     if 'continue'in query or 'resume' in query or 'stop' in query or 'pause' in query:
                          speak("Ok sir!....")
                          pyautogui.press('space')
-                    elif 'wikipedia' in  query:
+                    if 'wikipedia' in  query:
                          speak("searching in wikipedia")
                          try:
                               query=query.replace("wikipedia",'')
@@ -133,12 +133,12 @@ if __name__ == "__main__":
                          except:
                               print("No Results Found..")
                               speak("No Results Found..")
-                    elif 'youtube' in query :
+                    if 'youtube' in query :
                          playquery=query.replace("youtube",'')
                          playquery=query.replace("play",'')
                          speak("playing"+playquery)
                          pywhatkit.playonyt(playquery)
-                    elif 'writing' in query:
+                    if 'write' in query:
                          speak("Please tell me what  should I write")
                          while True:
                               typequery = commands()
@@ -148,31 +148,31 @@ if __name__ == "__main__":
                                    break 
                               else:
                                    pyautogui.write(typequery)
-                    elif'minimize the window'in query or 'minimise ' in query or 'minimize' in query :
+                    if'minimize the window'in query or 'minimise ' in query or 'minimize' in query :
                          pyautogui.hotkey('win','down','down')
                          speak('minimizing sir!...')
-                    elif'maximize the window'in query or 'maximise ' in query :
+                    if'maximize the window'in query or 'maximise ' in query :
                          pyautogui.hotkey('win','up','up')
                          speak('maximizing sir!....')
-                    elif'close'in query or 'close the window' in query :
+                    if'close'in query or 'close the window' in query :
                          pyautogui.hotkey('ctrl','w')
-                    elif'open control panel'in query or 'control ' in query :
+                    if'open control panel'in query or 'control ' in query :
                          pyautogui.moveTo(1733,1050)
                          pyautogui.leftClick()
-                    elif'screenshot'in query:
+                    if'screenshot'in query:
                          speak('taking screenshot sir')
                          pyautogui.press('prtsc')
-                    elif 'open our channel'in query or 'go to our channel'in query or 'our channel' in query or 'youtube channel' in query:
+                    if 'open our channel'in query or 'go to our channel'in query or 'our channel' in query or 'youtube channel' in query:
                          speak("Opening Our Channel sir!....")
                          os.startfile("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe")
                          while True:
                               pyautogui.write('https://www.youtube.com/channel/UCZpzgFrQrpkn1pB6uuiUxDA')
                               pyautogui.press('enter')
                               break                     
-                    elif 'open chrome'in query:
-                         speak("Opening Canva Sir ")
+                    if 'open canva'in query:
+                         speak("Opening canva Sir ")
                          os.startfile("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe")
                          while True:
                               pyautogui.write('https://www.canva.com/')
                               pyautogui.press('enter')
-                              break
+                              break                
