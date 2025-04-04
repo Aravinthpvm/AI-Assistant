@@ -170,7 +170,7 @@ if __name__ == "__main__":
                               pyautogui.press('enter')
                               break                     
                     elif 'open chrome'in query:
-                         speak("Opening Chrome Sir ")
+                         speak("Opening Canva Sir ")
                          os.startfile("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe")
                          while True:
                               pyautogui.write('https://www.canva.com/')
